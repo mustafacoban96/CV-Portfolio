@@ -1,17 +1,39 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { CssBaseline, ThemeProvider, createTheme } from '@mui/material';
+import { reducer } from './reducer/pageReducer/pageReducer';
+import { Provider} from 'react-redux';
+import { createStore } from 'redux';
+
+
+const theme = createTheme({
+  palette:{
+    navbarColor:{
+      main:'#e0e0e0',
+      light:'yellow',
+      dark:'purple'
+    }
+  },
+})
+
+
+const store = createStore(reducer);
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  // <React.StrictMode>
+  <Provider store={store}>
+    <ThemeProvider theme={theme}>
+      <CssBaseline>
+      <App />
+    </CssBaseline>
+  </ThemeProvider>
+  </Provider>
+  
+   
+  // </React.StrictMode>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+
