@@ -27,6 +27,26 @@ const MyDownloadIcon = styled(FileDownloadIcon)(() =>({
   }
 }))
 
+
+const handleDownload = () => {
+  // Dosya yolu belirtin
+  const fileUrl = "/MustafaCobanCV.pdf";
+
+  // Bir link oluşturun
+  const link = document.createElement("a");
+  link.href = fileUrl;
+
+  // Dosya adını belirtin
+  link.setAttribute("download", "MustafaCobanCv.pdf");
+
+  // Linki tıklayın ve dosyayı indirin
+  document.body.appendChild(link);
+  link.click();
+
+  // Linki kaldırın
+  document.body.removeChild(link);
+};
+
 const DownloadFileBtn = () => {
 
   const [rotate, setRotate] = useState(false);
@@ -53,10 +73,11 @@ const DownloadFileBtn = () => {
     <MyIconBox rotate={rotate.toString()}>
         <Typography variant='h6' sx={{color:'white',px:2}}>Download CV</Typography>
       <IconButton 
+      onClick={handleDownload}
       target="_blank"
       rel="noreferrer"
-      href="/MustafaCobanCV.pdf"
-      download="MustafaCobanCv.pdf"
+      //href="/MustafaCobanCV.pdf"
+      //download="MustafaCobanCv.pdf"
       sx={{
         color:'white',
         background: flash ? alpha('#d50000',0.2) : alpha('#d50000',0.6),
