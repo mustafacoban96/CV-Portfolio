@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/CV-Portfolio/static/css/main.f7110b7a.css",
-    "main.js": "/CV-Portfolio/static/js/main.8cfbfb8d.js",
+    "main.js": "/CV-Portfolio/static/js/main.4fd4ddf9.js",
     "static/media/my.gif": "/CV-Portfolio/static/media/my.e1d8a0f12f208401dd16.gif",
     "index.html": "/CV-Portfolio/index.html",
     "main.f7110b7a.css.map": "/CV-Portfolio/static/css/main.f7110b7a.css.map",
-    "main.8cfbfb8d.js.map": "/CV-Portfolio/static/js/main.8cfbfb8d.js.map"
+    "main.4fd4ddf9.js.map": "/CV-Portfolio/static/js/main.4fd4ddf9.js.map"
   },
   "entrypoints": [
     "static/css/main.f7110b7a.css",
-    "static/js/main.8cfbfb8d.js"
+    "static/js/main.4fd4ddf9.js"
   ]
 }
