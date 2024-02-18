@@ -27,24 +27,25 @@ const MyDownloadIcon = styled(FileDownloadIcon)(() =>({
   }
 }))
 
+const pdfUrl = process.env.REACT_APP_PUBLIC_URL
 
 const handleDownload = () => {
   // Dosya yolu belirtin
-  const fileUrl = "/MustafaCobanCV.pdf";
+  const fileUrl = pdfUrl;
 
   // Bir link oluşturun
-  const link = document.createElement("a");
-  link.href = fileUrl;
+  const my_link = document.createElement("a");
+  my_link.href = fileUrl;
 
   // Dosya adını belirtin
-  link.setAttribute("download", "MustafaCobanCv.pdf");
+  my_link.setAttribute("download", "MustafaCobanCv.pdf");
 
   // Linki tıklayın ve dosyayı indirin
-  document.body.appendChild(link);
-  link.click();
+  document.body.appendChild(my_link);
+  my_link.click();
 
   // Linki kaldırın
-  document.body.removeChild(link);
+  document.body.removeChild(my_link);
 };
 
 const DownloadFileBtn = () => {

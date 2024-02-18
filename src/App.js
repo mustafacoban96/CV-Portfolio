@@ -14,6 +14,8 @@ import DownloadFileBtn from './components/downloadFileBtn/DownloadFileBtn';
 
 const App = (props) => {
   
+  console.log(process.env.REACT_APP_MY_KEY)
+  
   
   return (
     
