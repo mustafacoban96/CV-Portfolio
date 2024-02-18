@@ -31,6 +31,7 @@ const MyDownloadIcon = styled(FileDownloadIcon)(() =>({
 const pdfUrl = process.env.REACT_APP_PUBLIC_URL
 
 const handleDownload = () => {
+  console.log("start")
   // Dosya yolu belirtin
   const fileUrl = pdfUrl;
 
@@ -39,7 +40,7 @@ const handleDownload = () => {
   my_link.href = fileUrl;
 
   // Dosya adını belirtin
-  my_link.setAttribute("download", "MustafaCobanCv.pdf");
+  my_link.setAttribute("download", "MustafaCobanCV.pdf");
 
   // Linki tıklayın ve dosyayı indirin
   document.body.appendChild(my_link);
@@ -47,6 +48,8 @@ const handleDownload = () => {
 
   // Linki kaldırın
   document.body.removeChild(my_link);
+
+  console.log("finish")
 };
 
 const DownloadFileBtn = () => {
