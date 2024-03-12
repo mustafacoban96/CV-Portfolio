@@ -28,7 +28,7 @@ const MyDownloadIcon = styled(FileDownloadIcon)(() =>({
   }
 }))
 
-const pdfUrl = process.env.REACT_APP_PUBLIC_URL
+const pdfUrl = "MustafaCobanCV.pdf"
 
 const handleDownload = () => {
   console.log("start")
