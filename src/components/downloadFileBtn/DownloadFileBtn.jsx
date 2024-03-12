@@ -38,14 +38,16 @@ const handleDownload = () => {
   // Bir link oluşturun
   const my_link = document.createElement("a");
   my_link.href = "MustafaCobanCV.pdf";
-  my_link.innerText = "cv indir "
+  my_link.innerHTML += "cv indirrrrrrrr"
 
   // Dosya adını belirtin
   my_link.setAttribute("download", "MustafaCobanCV.pdf");
 
   // Linki tıklayın ve dosyayı indirin
   document.body.appendChild(my_link);
-  my_link.click();
+  console.log(my_link);
+
+  //my_link.click();
 
   // Linki kaldırın
   //document.body.removeChild(my_link);
