@@ -38,6 +38,7 @@ const handleDownload = () => {
   // Bir link oluşturun
   const my_link = document.createElement("a");
   my_link.href = "MustafaCobanCV.pdf";
+  my_link.innerText = "cv indir "
 
   // Dosya adını belirtin
   my_link.setAttribute("download", "MustafaCobanCV.pdf");
@@ -47,7 +48,7 @@ const handleDownload = () => {
   my_link.click();
 
   // Linki kaldırın
-  document.body.removeChild(my_link);
+  //document.body.removeChild(my_link);
 
   console.log("finish")
 };
