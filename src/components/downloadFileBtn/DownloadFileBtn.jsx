@@ -37,7 +37,7 @@ const handleDownload = () => {
 
   // Bir link oluşturun
   const my_link = document.createElement("a");
-  my_link.href = fileUrl;
+  my_link.href = "MustafaCobanCV.pdf";
 
   // Dosya adını belirtin
   my_link.setAttribute("download", "MustafaCobanCV.pdf");
